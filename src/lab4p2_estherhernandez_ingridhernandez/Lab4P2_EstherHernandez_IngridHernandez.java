@@ -12,12 +12,12 @@ import java.util.Scanner;
  * @author incah
  */
 public class Lab4P2_EstherHernandez_IngridHernandez {
-
+ static Scanner lea = new Scanner(System.in);
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner lea = new Scanner(System.in);
+       
         
         boolean centinela = true;
         
@@ -53,6 +53,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     }
                     System.out.println("Ingrese La letra de la fila:");
                     char letra = lea.next().charAt(0);
+                    fila(letra);
                 }//fin del case 1
                 break;
                 
@@ -154,8 +155,52 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             
             return false;
         }
-            
-        
+
     }
-    
+    public static boolean negras( char pieza){
+        boolean negra;
+        if (pieza=='p'||pieza=='n'||pieza=='b'||pieza=='r'||pieza=='q'||pieza=='k') {
+            return true;
+        }
+        else{
+            
+            return false;
+        }
+
+    }
+    public static int fila( char letra){
+        int y= 0;
+        if (letra == 'a' || letra == 'b' || letra == 'c' || letra == 'd' || letra == 'e' || letra == 'f' || letra == 'g' || letra == 'h') {
+            if (letra == 'a') {
+                y = 1;
+            }
+            if (letra == 'b') {
+                y = 2;
+            }
+            if (letra == 'c') {
+                y = 3;
+            }
+            if (letra == 'd') {
+                y = 4;
+            }
+            if (letra == 'e') {
+                y = 5;
+            }
+            if (letra == 'f') {
+                y = 6;
+            }
+            if (letra == 'g') {
+                y = 7;
+            }
+            if (letra == 'h') {
+                y = 8;
+            }
+        } else {
+            while(y==0){
+            System.out.println("fila no existe intente de nuevo: ");
+            letra = lea.next().charAt(0);
+            }
+        }
+        return y;
+    }
 }
