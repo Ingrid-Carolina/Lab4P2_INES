@@ -26,11 +26,22 @@ public class alfil extends Pieza{
     public void ValidarMovimiento() {
         if (color == "negro") {
             if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) {
-           
             tablero[x1][y1]= tipo;
             tablero[p1][p2]= ' ';
+            }
+            else{
+                System.out.println("La pieza no puede moverse");
+            }
         }
-    }
+        if (color == "blanco") {
+            if (tablero[x1][y1]==' '&& ((p1-1==x1)&& (p2-1==y1))) {
+            tablero[x1][y1]= tipo;
+            tablero[p1][p2]= ' ';
+            }
+            else{
+                System.out.println("La pieza no puede moverse");
+            }
+        }
         }
         
 
