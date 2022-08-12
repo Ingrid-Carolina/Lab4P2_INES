@@ -39,6 +39,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     String jug2 = lea.next();
                     tablero1 = tablero(tablero1);
                     MatrizRecursiva(tablero1,0,0);
+                    System.out.println("Ingrese  coordenadas del jugador 1");
                 }//fin del case 1
                 break;
                 
