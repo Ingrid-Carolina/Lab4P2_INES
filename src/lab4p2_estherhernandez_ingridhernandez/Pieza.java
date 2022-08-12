@@ -10,6 +10,7 @@ import java.awt.Color;
 public class Pieza {
     public int x;
     public int y;
-    public Color color;
+    
+    public char [][]tablero = new char[9][9];
     
 }

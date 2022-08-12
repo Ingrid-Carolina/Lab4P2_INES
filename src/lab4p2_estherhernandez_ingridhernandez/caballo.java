@@ -9,6 +9,10 @@ package lab4p2_estherhernandez_ingridhernandez;
  *
  * @author incah
  */
+<<<<<<< HEAD
 public class caballo extends Pieza{
+=======
+public class caballo extends Pieza {
+>>>>>>> 94f2ff7ff6e40f6213f442dff6c44d20a67c64da
     
 }
