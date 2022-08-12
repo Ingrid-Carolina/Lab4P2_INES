@@ -33,7 +33,11 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 case 1:{
                     char[][] tablero = new char[9][9];
                     
-                    System.out.println("");
+                    System.out.println("Ingrese en nombre del Jugador1: ");
+                    String jug1 = lea.next();
+                    System.out.println("Ingrese en nombre del Jugador2: ");
+                    String jug2 = lea.next();
+                    
                 }//fin del case 1
                 break;
                 
@@ -46,6 +50,30 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             }//fin del switch
         }//fin while
         
+    }
+    public static char[][] tablero(char[][]matriz){
+        
+                matriz[0][0]='8';
+                matriz[1][0]='7';
+                matriz[2][0]='6';
+                matriz[3][0]='5';
+                matriz[4][0]='4';
+                matriz[5][0]='3';
+                matriz[6][0]='2';
+                matriz[7][0]='1';
+                matriz[8][0]='A';
+                matriz[8][1]='B';
+                matriz[8][2]='C';
+                matriz[8][3]='D';
+                matriz[8][4]='E';
+                matriz[8][5]='F';
+                matriz[8][6]='G';
+                matriz[8][7]='H';
+         
+        
+        
+        
+        return matriz;
     }
     
 }
