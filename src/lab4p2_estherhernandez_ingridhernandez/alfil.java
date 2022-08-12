@@ -11,9 +11,21 @@ package lab4p2_estherhernandez_ingridhernandez;
  */
 public class alfil extends Pieza{
 
+    public alfil() {
+        super();
+        
+    }
+
+    public alfil(int x1, int y1, String color, char tipo) {
+        super(x1, y1, color, tipo);
+    }
+    
+
     @Override
     public void ValidarMovimiento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (true) {
+            
+        }
     }
     
 }
