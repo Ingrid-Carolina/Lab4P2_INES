@@ -31,6 +31,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             switch (opcion){
                 
                 case 1:{
+                    Pieza p = new Pieza();
                     char[][] tablero1 = new char[9][9];
                     String color;
                     System.out.println("Ingrese en nombre del Jugador1: ");
@@ -63,6 +64,8 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                         x = lea.nextInt();
                     }
                     movimiento(pieza,x,y,tablero1,color);
+                    //Jugador 2
+                    
                      System.out.println("Ingrese  coordenadas del jugador 2(Piezas negras parte superior del tablero)");
                      color = "negro";
                     System.out.println("Ingrese la pieza que desea mover(ejemplo: r): ");
@@ -233,10 +236,22 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
         return y;
     }
     public static void movimiento(char tipo,int x,int y, char [][]tablero, String color){
-        
+        boolean validar;
         for (int i = 0; i < tablero.length; i++) {
+            int p1,p2;
+            
             for (int j = 0; j < tablero[i].length; j++) {
-                
+                if (tablero[i][j]==tipo) {
+                    p1 = i;
+                    p2= j;
+                }
+            }
+            if(tipo == 'p'){
+                validar = 
+                if (validar == true) {
+                    tablero[x][y]= tipo;
+                    tablero[p1][p2]= ' ';
+                }
             }
             
         }
