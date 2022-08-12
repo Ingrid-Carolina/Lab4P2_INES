@@ -61,19 +61,36 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 matriz[5][0]='3';
                 matriz[6][0]='2';
                 matriz[7][0]='1';
-                matriz[8][0]='A';
-                matriz[8][1]='B';
-                matriz[8][2]='C';
-                matriz[8][3]='D';
-                matriz[8][4]='E';
-                matriz[8][5]='F';
-                matriz[8][6]='G';
-                matriz[8][7]='H';
-         
-        
-        
-        
+                matriz[8][1]='A';
+                matriz[8][2]='B';
+                matriz[8][3]='C';
+                matriz[8][4]='D';
+                matriz[8][5]='E';
+                matriz[8][6]='F';
+                matriz[8][7]='G';
+                matriz[8][8]='H';
+                matriz[1][1]='r';
+                matriz[1][2]='n';
+                matriz[1][3]='r';
+                matriz[1][4]='q';
+                matriz[1][5]='k';
+                
+
         return matriz;
+    }
+    
+        public void MatrizRecursiva(char[][] tablero, int fil, int col) {
+     if (fil == tablero .length - 1 && col == tablero[0].length - 1) {
+            System.out.print("[" + tablero[fil][col] + "]" + "        ");
+        } else {
+            if (col == tablero[0].length - 1) {
+                System.out.println("[" + tablero[fil][col] + "]");
+                MatrizRecursiva(tablero, fil + 1, 0);
+            } else {
+                System.out.print("[" + tablero[fil][col] + "]" + "        ");
+                MatrizRecursiva(tablero, fil, col + 1);
+            }
+        }
     }
     
 }
