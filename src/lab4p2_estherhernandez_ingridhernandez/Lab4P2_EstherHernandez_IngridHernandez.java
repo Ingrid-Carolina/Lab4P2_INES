@@ -31,13 +31,15 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             switch (opcion){
                 
                 case 1:{
-                    char[][] tablero = new char[9][9];
+                    char[][] tablero1 = new char[9][9];
                     
                     System.out.println("Ingrese en nombre del Jugador1: ");
                     String jug1 = lea.next();
                     System.out.println("Ingrese en nombre del Jugador2: ");
                     String jug2 = lea.next();
-                    
+                    tablero1 = tablero(tablero1);
+                    MatrizRecursiva(tablero1,0,0);
+                    System.out.println("Ingrese  coordenadas del jugador 1");
                 }//fin del case 1
                 break;
                 
@@ -71,15 +73,27 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 matriz[8][8]='H';
                 matriz[1][1]='r';
                 matriz[1][2]='n';
-                matriz[1][3]='r';
+                matriz[1][3]='b';
                 matriz[1][4]='q';
                 matriz[1][5]='k';
+                matriz[1][6]='b';
+                matriz[1][7]='n';
+                matriz[1][8]='r';
+                matriz[2][1]='p';
+                matriz[2][2]='p';
+                matriz[2][3]='p';
+                matriz[2][4]='p';
+                matriz[2][5]='p';
+                matriz[2][6]='p';
+                matriz[2][7]='p';
+                matriz[2][8]='p';
+                
                 
 
         return matriz;
     }
     
-        public void MatrizRecursiva(char[][] tablero, int fil, int col) {
+        public static void MatrizRecursiva(char[][] tablero, int fil, int col) {
      if (fil == tablero .length - 1 && col == tablero[0].length - 1) {
             System.out.print("[" + tablero[fil][col] + "]" + "        ");
         } else {
