@@ -11,21 +11,30 @@ package lab4p2_estherhernandez_ingridhernandez;
  */
 public class alfil extends Pieza{
 
+   
     public alfil() {
         super();
         
     }
 
-    public alfil(int x1, int y1, String color, char tipo) {
-        super(x1, y1, color, tipo);
+    public alfil(int x1, int y1, int p1, int p2, String color, char tipo, char[][] tablero) {
+        super(x1, y1, p1, p2, color, tipo, tablero);
     }
     
 
     @Override
     public void ValidarMovimiento() {
-        if (true) {
-            
+        if (color == "negro") {
+            if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) {
+           
+            tablero[x1][y1]= tipo;
+            tablero[p1][p2]= ' ';
         }
     }
-    
+        }
+        
+
+        
 }
+    
+
