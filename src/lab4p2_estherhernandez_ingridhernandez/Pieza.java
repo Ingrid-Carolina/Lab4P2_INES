@@ -12,16 +12,17 @@ public abstract class Pieza implements  ValidarM {
     public int y1;
     public String color;
     public char tipo;
-    
+    public char [][] tablero;
 
     public Pieza() {
     }
 
-    public Pieza(int x1, int y1, String color, char tipo) {
+    public Pieza(int x1, int y1, String color, char tipo,char [][] tablero) {
         this.x1 = x1;
         this.y1 = y1;
         this.color = color;
         this.tipo = tipo;
+        this.tablero = tablero;
     }
 
     public int getX1() {
@@ -56,12 +57,19 @@ public abstract class Pieza implements  ValidarM {
         this.tipo = tipo;
     }
 
-   
+    public char[][] getTablero() {
+        return tablero;
+    }
+
+    public void setTablero(char[][] tablero) {
+        this.tablero = tablero;
+    }
 
     @Override
     public String toString() {
-        return "Pieza{" + "x1=" + x1 + ", y1=" + y1 + ", color=" + color + ", tipo=" + tipo + '}';
+        return "Pieza{" + "x1=" + x1 + ", y1=" + y1 + ", color=" + color + ", tipo=" + tipo + ", tablero=" + tablero + '}';
     }
+    
     
     
 }
