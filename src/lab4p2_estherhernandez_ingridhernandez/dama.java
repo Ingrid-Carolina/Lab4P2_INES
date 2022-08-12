@@ -21,7 +21,7 @@ public class dama extends Pieza{
     
 
     @Override
-    public void ValidarMovimiento() {
+    public boolean ValidarMovimiento() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

@@ -9,5 +9,5 @@ package lab4p2_estherhernandez_ingridhernandez;
  * @author ELIZABETH HERNANDEZ
  */
 public interface ValidarM {
-    public void ValidarMovimiento();
+    public boolean ValidarMovimiento();
 }

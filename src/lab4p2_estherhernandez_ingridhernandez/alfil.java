@@ -23,7 +23,7 @@ public class alfil extends Pieza{
     
 
     @Override
-    public void ValidarMovimiento() {
+    public boolean ValidarMovimiento() {
         if (color == "negro") {
             if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) {
             tablero[x1][y1]= tipo;
