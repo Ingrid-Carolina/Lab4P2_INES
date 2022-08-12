@@ -5,6 +5,8 @@
  */
 package lab4p2_estherhernandez_ingridhernandez;
 
+import java.util.Scanner;
+
 /**
  *
  * @author incah
@@ -15,8 +17,35 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner lea = new Scanner(System.in);
         
-        System.out.println("Ajedrez");
+        boolean centinela = true;
+        
+        while(centinela == true){
+            System.out.println("==============Menu=================");
+            System.out.println("1)Jugar Ajedrez ");
+            System.out.println("2)Salir");
+            System.out.println("===================================");
+            System.out.print("Ingrese la opcion que desea: ");
+            int opcion = lea.nextInt();
+            switch (opcion){
+                
+                case 1:{
+                    char[][] tablero = new char[9][9];
+                    
+                    System.out.println("");
+                }//fin del case 1
+                break;
+                
+                case 2:
+                    centinela = false;
+                 break;
+           
+                default:
+           System.out.println("Opcion Incorrecta");
+            }//fin del switch
+        }//fin while
+        
     }
     
 }

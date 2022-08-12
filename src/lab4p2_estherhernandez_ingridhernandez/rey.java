@@ -9,6 +9,6 @@ package lab4p2_estherhernandez_ingridhernandez;
  *
  * @author incah
  */
-public class rey {
+public class rey extends Pieza{
     
 }

@@ -9,6 +9,6 @@ package lab4p2_estherhernandez_ingridhernandez;
  *
  * @author incah
  */
-public class peon {
+public class peon extends Pieza {
     
 }
