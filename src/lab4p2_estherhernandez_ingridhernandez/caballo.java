@@ -11,6 +11,16 @@ package lab4p2_estherhernandez_ingridhernandez;
  */
 public class caballo extends Pieza{
 
+    public caballo() {
+        super();
+        
+    }
+
+    public caballo(int x1, int y1, int p1, int p2, String color, char tipo, char[][] tablero) {
+        super(x1, y1, p1, p2, color, tipo, tablero);
+    }
+    
+
     @Override
     public void ValidarMovimiento() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
