@@ -8,8 +8,13 @@ import java.awt.Color;
  * @author incah
  */
 public abstract class Pieza implements  ValidarM {
-    public int x;
-    public int y;
+    public int x1;
+    public int y1;
+    public int x2;
+    public int y2;
+
+    public Pieza() {
+    }
     
     public char [][]tablero = new char[9][9];
     public void MatrizRecursiva(char[][] tablero, int fil, int col) {
