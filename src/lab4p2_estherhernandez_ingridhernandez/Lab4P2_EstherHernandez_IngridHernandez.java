@@ -40,7 +40,19 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     tablero1 = tablero(tablero1);
                     MatrizRecursiva(tablero1,0,0);
                     System.out.println();
-                    System.out.println("Ingrese  coordenadas del jugador 1");
+                    System.out.println("Piezas");
+                    System.out.println("Peon = p\nCaballo = n\nAlfil = b\nTorre = r\nDama = q\nRey = k");
+                    System.out.println("Ingrese  coordenadas del jugador 1(Piezas blancas parte inferior del tablero)");
+                    System.out.println("Ingrese la pieza que desea mover(ejemplo: R): ");
+                    char pieza = lea.next().charAt(0);
+                    boolean v = blancas(pieza);
+                    while(v == false){
+                        System.out.println("pieza no le pertence, ingrese de nuevo: ");
+                        pieza = lea.next().charAt(0);
+                        v = blancas(pieza);
+                    }
+                    System.out.println("Ingrese La letra de la fila:");
+                    char letra = lea.next().charAt(0);
                 }//fin del case 1
                 break;
                 
@@ -119,7 +131,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
         return matriz;
     }
     
-        public static void MatrizRecursiva(char[][] tablero, int fil, int col) {
+    public static void MatrizRecursiva(char[][] tablero, int fil, int col) {
      if (fil == tablero .length - 1 && col == tablero[0].length - 1) {
             System.out.print("[" + tablero[fil][col] + "]" + "   ");
         } else {
@@ -132,6 +144,18 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             }
             
         }
+    }
+    public static boolean blancas( char pieza){
+        boolean blanca;
+        if (pieza=='P'||pieza=='N'||pieza=='B'||pieza=='R'||pieza=='Q'||pieza=='K') {
+            return true;
+        }
+        else{
+            
+            return false;
+        }
+            
+        
     }
     
 }
