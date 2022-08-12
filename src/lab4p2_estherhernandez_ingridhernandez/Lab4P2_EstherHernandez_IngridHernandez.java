@@ -39,6 +39,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     String jug2 = lea.next();
                     tablero1 = tablero(tablero1);
                     MatrizRecursiva(tablero1,0,0);
+                    System.out.println();
                     System.out.println("Ingrese  coordenadas del jugador 1");
                 }//fin del case 1
                 break;
@@ -54,7 +55,12 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
         
     }
     public static char[][] tablero(char[][]matriz){
-        
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+              matriz [i][j] = ' ';  
+            }
+            
+        }
                 matriz[0][0]='8';
                 matriz[1][0]='7';
                 matriz[2][0]='6';
@@ -71,22 +77,42 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 matriz[8][6]='F';
                 matriz[8][7]='G';
                 matriz[8][8]='H';
+                
+                //Piezas blancas
                 matriz[0][1]='r';
                 matriz[0][2]='n';
                 matriz[0][3]='b';
-                matriz[1][4]='q';
-                matriz[1][5]='k';
-                matriz[1][6]='b';
-                matriz[1][7]='n';
-                matriz[1][8]='r';
-                matriz[2][1]='p';
-                matriz[2][2]='p';
-                matriz[2][3]='p';
-                matriz[2][4]='p';
-                matriz[2][5]='p';
-                matriz[2][6]='p';
-                matriz[2][7]='p';
-                matriz[2][8]='p';
+                matriz[0][4]='q';
+                matriz[0][5]='k';
+                matriz[0][6]='b';
+                matriz[0][7]='n';
+                matriz[0][8]='r';
+                matriz[1][1]='p';
+                matriz[1][2]='p';
+                matriz[1][3]='p';
+                matriz[1][4]='p';
+                matriz[1][5]='p';
+                matriz[1][6]='p';
+                matriz[1][7]='p';
+                matriz[1][8]='p';
+                
+                //piezas negras
+                matriz[7][8]='R';
+                matriz[7][7]='N';
+                matriz[7][6]='B';
+                matriz[7][5]='Q';
+                matriz[7][4]='K';
+                matriz[7][3]='B';
+                matriz[7][2]='N';
+                matriz[7][1]='R';
+                matriz[6][1]='P';
+                matriz[6][2]='P';
+                matriz[6][3]='P';
+                matriz[6][4]='P';
+                matriz[6][5]='P';
+                matriz[6][6]='P';
+                matriz[6][7]='P';
+                matriz[6][8]='P';
                 
                 
 
@@ -95,7 +121,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
     
         public static void MatrizRecursiva(char[][] tablero, int fil, int col) {
      if (fil == tablero .length - 1 && col == tablero[0].length - 1) {
-            System.out.print("[" + tablero[fil][col] + "]" + "        ");
+            System.out.print("[" + tablero[fil][col] + "]" + "   ");
         } else {
             if (col == tablero[0].length - 1) {
                 System.out.println("[" + tablero[fil][col] + "]");
@@ -104,6 +130,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 System.out.print("[" + tablero[fil][col] + "]" + "        ");
                 MatrizRecursiva(tablero, fil, col + 1);
             }
+            
         }
     }
     
