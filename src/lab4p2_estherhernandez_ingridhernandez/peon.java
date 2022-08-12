@@ -25,7 +25,7 @@ public class peon extends Pieza {
     @Override
     public boolean ValidarMovimiento() {
         boolean mov = false;
-        if (color == "negro") {
+        if (color.equalsIgnoreCase("negro")) {
             if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) { 
                 mov =  true;
             }
@@ -36,7 +36,7 @@ public class peon extends Pieza {
             }
            
         }
-        if (color == "blanco") {
+        if (color.equalsIgnoreCase("blanco")) {
             if (tablero[x1][y1]==' '&& ((p1-1==x1)&& (p2-1==y1))) {
             mov = true;
             }
