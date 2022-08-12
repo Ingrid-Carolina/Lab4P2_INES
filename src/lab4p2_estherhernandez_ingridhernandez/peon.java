@@ -26,11 +26,8 @@ public class peon extends Pieza {
     public boolean ValidarMovimiento() {
         boolean mov = false;
         if (color == "negro") {
-            if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) {
-                 tablero[x1][y1]= tipo;
-            tablero[p1][p2]= ' ';
+            if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) { 
                 mov =  true;
-           
             }
             else{
                 System.out.println("La pieza no puede moverse");
@@ -41,12 +38,9 @@ public class peon extends Pieza {
         }
         if (color == "blanco") {
             if (tablero[x1][y1]==' '&& ((p1-1==x1)&& (p2-1==y1))) {
-            tablero[x1][y1]= tipo;
-            tablero[p1][p2]= ' ';
             mov = true;
             }
             else{
-                System.out.println("La pieza no puede moverse");
                 mov = false;
             }
         }

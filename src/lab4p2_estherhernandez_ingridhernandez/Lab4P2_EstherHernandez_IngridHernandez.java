@@ -32,7 +32,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 
                 case 1:{
                     char[][] tablero1 = new char[9][9];
-                    
+                    String color;
                     System.out.println("Ingrese en nombre del Jugador1: ");
                     String jug1 = lea.next();
                     System.out.println("Ingrese en nombre del Jugador2: ");
@@ -43,6 +43,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     System.out.println("Piezas");
                     System.out.println("Peon = p\nCaballo = n\nAlfil = b\nTorre = r\nDama = q\nRey = k");
                     System.out.println("Ingrese  coordenadas del jugador 1(Piezas blancas parte inferior del tablero)");
+                    color = "blanco";
                     System.out.println("Ingrese la pieza que desea mover(ejemplo: R): ");
                     char pieza = lea.next().charAt(0);
                     boolean v = blancas(pieza);
@@ -54,6 +55,34 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     System.out.println("Ingrese La letra de la fila:");
                     char letra = lea.next().charAt(0);
                     fila(letra);
+                    int y = fila(letra);
+                    System.out.println("Ingrese el numero de la columna:");
+                    int x = lea.nextInt();
+                    while(x<1||x>8){
+                        System.out.println("Numero invalido, intente de nuevo:");
+                        x = lea.nextInt();
+                    }
+                    movimiento(pieza,x,y,tablero1,color);
+                     System.out.println("Ingrese  coordenadas del jugador 2(Piezas negras parte superior del tablero)");
+                     color = "negro";
+                    System.out.println("Ingrese la pieza que desea mover(ejemplo: r): ");
+                    char pieza1= lea.next().charAt(0);
+                    boolean v1 = negras(pieza1);
+                    while(v1 == false){
+                        System.out.println("pieza no le pertence, ingrese de nuevo: ");
+                        pieza1 = lea.next().charAt(0);
+                        v = negras(pieza1);
+                    }
+                    System.out.println("Ingrese La letra de la fila:");
+                    char letra1 = lea.next().charAt(0);
+                    fila(letra1);
+                    int y1 = fila(letra1);
+                    System.out.println("Ingrese el numero de la columna:");
+                    int x1 = lea.nextInt();
+                    while(x1<1||x1>8){
+                        System.out.println("Numero invalido, intente de nuevo:");
+                        x1 = lea.nextInt();
+                    }
                 }//fin del case 1
                 break;
                 
@@ -202,5 +231,14 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             }
         }
         return y;
+    }
+    public static void movimiento(char tipo,int x,int y, char [][]tablero, String color){
+        
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[i].length; j++) {
+                
+            }
+            
+        }
     }
 }
