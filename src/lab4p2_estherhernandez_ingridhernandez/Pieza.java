@@ -7,7 +7,7 @@ import java.awt.Color;
  *
  * @author incah
  */
-public class Pieza {
+public abstract class Pieza implements  ValidarM {
     public int x;
     public int y;
     
