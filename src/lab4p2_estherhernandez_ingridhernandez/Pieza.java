@@ -10,24 +10,58 @@ import java.awt.Color;
 public abstract class Pieza implements  ValidarM {
     public int x1;
     public int y1;
-    public int x2;
-    public int y2;
+    public String color;
+    public char tipo;
+    
 
     public Pieza() {
     }
-    
-    public char [][]tablero = new char[9][9];
-    public void MatrizRecursiva(char[][] tablero, int fil, int col) {
-     if (fil == tablero .length - 1 && col == tablero[0].length - 1) {
-            System.out.print("[" + tablero[fil][col] + "]" + "        ");
-        } else {
-            if (col == tablero[0].length - 1) {
-                System.out.println("[" + tablero[fil][col] + "]");
-                MatrizRecursiva(tablero, fil + 1, 0);
-            } else {
-                System.out.print("[" + tablero[fil][col] + "]" + "        ");
-                MatrizRecursiva(tablero, fil, col + 1);
-            }
-        }
+
+    public Pieza(int x1, int y1, String color, char tipo) {
+        this.x1 = x1;
+        this.y1 = y1;
+        this.color = color;
+        this.tipo = tipo;
     }
+
+    public int getX1() {
+        return x1;
+    }
+
+    public void setX1(int x1) {
+        this.x1 = x1;
+    }
+
+    public int getY1() {
+        return y1;
+    }
+
+    public void setY1(int y1) {
+        this.y1 = y1;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public char getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(char tipo) {
+        this.tipo = tipo;
+    }
+
+   
+
+    @Override
+    public String toString() {
+        return "Pieza{" + "x1=" + x1 + ", y1=" + y1 + ", color=" + color + ", tipo=" + tipo + '}';
+    }
+    
+    
 }
