@@ -71,9 +71,9 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                 matriz[8][6]='F';
                 matriz[8][7]='G';
                 matriz[8][8]='H';
-                matriz[1][1]='r';
-                matriz[1][2]='n';
-                matriz[1][3]='b';
+                matriz[0][1]='r';
+                matriz[0][2]='n';
+                matriz[0][3]='b';
                 matriz[1][4]='q';
                 matriz[1][5]='k';
                 matriz[1][6]='b';
