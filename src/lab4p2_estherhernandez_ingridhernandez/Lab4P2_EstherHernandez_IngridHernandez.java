@@ -304,7 +304,7 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
         boolean validar= true;
       
             if(tipo == 'p' || tipo =='P'){
-                peon p = new peon(x,y,p1,p2,color,tipo,tablero);System.out.println("000000000000000000000000");
+                peon p = new peon(x,y,p1,p2,color,tipo,tablero);
                
                 validar = p.ValidarMovimiento(); System.out.println(validar);
                 if (validar == true) {
@@ -317,8 +317,65 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
             }
             
             
+            else if (tipo == 'n' || tipo =='N') {
+                     caballo c = new caballo(x,y,p1,p2,color,tipo,tablero);
+               
+                validar = c.ValidarMovimiento(); System.out.println(validar);
+                if (validar == true) {
+                    tablero[x][y]= tipo;
+                    tablero[p1][p2]= ' ';
+                }
+                else{
+                    System.out.println("Movimiento no valido. ");
+                }
+            }
             else if (tipo == 'r' || tipo =='R') {
-                     
+                     torre r = new torre(x,y,p1,p2,color,tipo,tablero);
+               
+                validar = r.ValidarMovimiento(); System.out.println(validar);
+                if (validar == true) {
+                    tablero[x][y]= tipo;
+                    tablero[p1][p2]= ' ';
+                }
+                else{
+                    System.out.println("Movimiento no valido. ");
+                }
+            }
+            else if (tipo == 'b' || tipo =='B') {
+                     alfil b = new alfil(x,y,p1,p2,color,tipo,tablero);
+               
+                validar = b.ValidarMovimiento(); System.out.println(validar);
+                if (validar == true) {
+                    tablero[x][y]= tipo;
+                    tablero[p1][p2]= ' ';
+                }
+                else{
+                    System.out.println("Movimiento no valido. ");
+                }
+            }
+            else if (tipo == 'q' || tipo =='Q') {
+                     dama q = new dama(x,y,p1,p2,color,tipo,tablero);
+               
+                validar = q.ValidarMovimiento(); System.out.println(validar);
+                if (validar == true) {
+                    tablero[x][y]= tipo;
+                    tablero[p1][p2]= ' ';
+                }
+                else{
+                    System.out.println("Movimiento no valido. ");
+                }
+            }
+            else if (tipo == 'k' || tipo =='K') {
+                     rey k = new rey(x,y,p1,p2,color,tipo,tablero);
+               
+                validar = k.ValidarMovimiento(); System.out.println(validar);
+                if (validar == true) {
+                    tablero[x][y]= tipo;
+                    tablero[p1][p2]= ' ';
+                }
+                else{
+                    System.out.println("Movimiento no valido. ");
+                }
                 }
             
             

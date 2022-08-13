@@ -23,22 +23,13 @@ public class caballo extends Pieza{
 
     @Override
     public boolean ValidarMovimiento() {
-         boolean max= true;
-        if (color.equalsIgnoreCase("blanco")) {
-            if () {
-            max =  true;
-        }
-            else{
-                max = false;
-            }
-        }
-        else if (color.equalsIgnoreCase("negro")) {
-            if (x1>p1 && p1+1==x1||p2==y1) {
+          boolean max= true;
+        if ((x1==p1+2&&y1==p2+1)||(x1==p1-2&&y1==p2+1)||(x1==p1+2&&y1==p2-1)||(x1==p1+1&&y1==p2+2)
+                ||(x1==p1+1&&y1==p2-2)||(x1==p1-1&&y1==p2+2)||(x1==p1-1&&y1==p2-2)) {
             max = true;
         }
-            else{
-                max = false;
-            }
+        else{
+            max=false;
         }
         return max;
     }
