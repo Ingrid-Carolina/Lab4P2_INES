@@ -315,6 +315,13 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     System.out.println("Movimiento no valido. ");
                 }
             }
+            
+            
+            else if (tipo == 'r' || tipo =='R') {
+                     
+                }
+            
+            
             return tablero;
         }
     }

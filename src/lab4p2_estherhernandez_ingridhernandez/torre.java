@@ -21,12 +21,24 @@ public class torre extends Pieza{
 
     @Override
     public boolean ValidarMovimiento() {
-            if (p1==x1||p2==y1) {
-                return true;
-            }
+        boolean max = true;
+        if (color.equalsIgnoreCase("blanco")) {
+            if (p1-1==x1||p2==y1) {
+            max =  true;
+        }
             else{
-                return false;
+                max = false;
             }
+        }
+        else if (color.equalsIgnoreCase("negro")) {
+            if (p1+1==x1||p2==y1) {
+            max = true;
+        }
+            else{
+                max = false;
+            }
+        }
+           return max;
     }
     
 }
