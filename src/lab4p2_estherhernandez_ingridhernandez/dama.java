@@ -22,7 +22,11 @@ public class dama extends Pieza{
 
     @Override
     public boolean ValidarMovimiento() {
-        
+        boolean max = true;
+        if (x1 == p1+3) {
+            
+        }
+        return max;
     }
     
 }
