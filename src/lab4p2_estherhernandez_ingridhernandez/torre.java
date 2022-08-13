@@ -21,7 +21,12 @@ public class torre extends Pieza{
 
     @Override
     public boolean ValidarMovimiento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            if (p1==x1||p2==y1) {
+                return true;
+            }
+            else{
+                return false;
+            }
     }
     
 }

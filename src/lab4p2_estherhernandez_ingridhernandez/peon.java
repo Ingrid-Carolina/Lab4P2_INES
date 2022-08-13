@@ -24,27 +24,24 @@ public class peon extends Pieza {
 
     @Override
     public boolean ValidarMovimiento() {
-        boolean mov = false;
-        if (color.equalsIgnoreCase("negro")) {
-            if (tablero[x1][y1]==' '&& ((p1+1==x1)&& (p2+1==y1))) { 
-                mov =  true;
-            }
-            else{
-                System.out.println("La pieza no puede moverse");
-                mov= false;
-               
-            }
-           
-        }
+        boolean max= true;
         if (color.equalsIgnoreCase("blanco")) {
-            if (tablero[x1][y1]==' '&& ((p1-1==x1)&& (p2-1==y1))) {
-            mov = true;
-            }
+            if (p1+1==x1||p2+1==y1) {
+            max =  true;
+        }
             else{
-                mov = false;
+                max = false;
             }
         }
-        return mov;
+        else if (color.equalsIgnoreCase("negro")) {
+            if (p1-1==x1||p2-1==y1) {
+            max = true;
+        }
+            else{
+                max = false;
+            }
+        }
+        return max;
         }
     
 }

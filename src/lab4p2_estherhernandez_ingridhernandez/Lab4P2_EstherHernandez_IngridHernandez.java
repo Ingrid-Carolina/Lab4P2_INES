@@ -61,10 +61,12 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                     int p2 = fila(letrap);
                     System.out.println("Ingrese el numero de la columna donde esta la pieza:");
                     int p1 = lea.nextInt();
+                    
                     while(p1<1||p1>8){
                         System.out.println("Numero invalido, intente de nuevo:");
                         p1 = lea.nextInt();
                     }
+                    p1=columna(p1);
                     //----------------------------------------------------------------
                     System.out.println("Ingrese La letra de la fila a donde desea mover la pieza:");
                     char letra = lea.next().charAt(0);
@@ -76,10 +78,13 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                         System.out.println("Numero invalido, intente de nuevo:");
                         x = lea.nextInt();
                     }
+                    x = columna(x);
                     tablero1 = movimiento(p1,p2,pieza,x,y,tablero1,color);
                     MatrizRecursiva(tablero1,0,0);
-                    //Jugador 2
+                    System.out.println();
                     
+                    //Jugador 2
+                    //comienza el jugador 2
                     System.out.println("Ingrese  coordenadas del jugador 2(Piezas negras parte superior del tablero)");
                     color = "negro";
                     System.out.println("Ingrese la pieza que desea mover(ejemplo: r): ");
@@ -90,16 +95,32 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
                         pieza1 = lea.next().charAt(0);
                         v = negras(pieza1);
                     }
-                    System.out.println("Ingrese La letra de la fila:");
+                    //-----------------------------------
+                    System.out.println("Ingrese La letra de la fila donde esta la pieza:");
+                    char letrap1 = lea.next().charAt(0);
+                    fila(letrap1);
+                    int p2p = fila(letrap1);
+                    System.out.println("Ingrese el numero de la columna donde esta la pieza:");
+                    int p1p = lea.nextInt();
+                    
+                    while(p1<1||p1>8){
+                        System.out.println("Numero invalido, intente de nuevo:");
+                        p1p = lea.nextInt();
+                    }
+                    p1p=columna(p1p);
+                    //-------------------------------------------------------
+                    System.out.println("Ingrese La letra de la fila donde desea mover la pieza::");
                     char letra1 = lea.next().charAt(0);
                     fila(letra1);
                     int y1 = fila(letra1);
-                    System.out.println("Ingrese el numero de la columna:");
+                    System.out.println("Ingrese el numero de la columna donde desea mover la pieza::");
                     int x1 = lea.nextInt();
                     while(x1<1||x1>8){
                         System.out.println("Numero invalido, intente de nuevo:");
                         x1 = lea.nextInt();
                     }
+                    tablero1 = movimiento(p1p,p2p,pieza1,x1,y1,tablero1,color);
+                    MatrizRecursiva(tablero1,0,0);
                 }//fin del case 1
                 break;
 
@@ -250,9 +271,37 @@ public class Lab4P2_EstherHernandez_IngridHernandez {
         }
         return y;
     }
+    public static int columna(int x1){
+        int x = 0;
+        if (x1==1) {
+            x= 7;
+        }
+        if (x1==2) {
+            x = 6;
+        }
+        if (x1==3) {
+            x = 5;
+        }
+        if (x1==4) {
+            x=4;
+        }
+        if (x1==5) {
+            x=3;
+        }
+        if (x1==6) {
+            x=2;
+        }
+        if (x1==7) {
+            x = 1;
+        }
+        if (x1==8) {
+            x = 0;
+        }
+        return x;
+    }
     //public
     public static char [][] movimiento(int p1, int p2,char tipo,int x,int y, char [][]tablero, String color){
-        boolean validar;
+        boolean validar= true;
       
             if(tipo == 'p' || tipo =='P'){
                 peon p = new peon(x,y,p1,p2,color,tipo,tablero);System.out.println("000000000000000000000000");
