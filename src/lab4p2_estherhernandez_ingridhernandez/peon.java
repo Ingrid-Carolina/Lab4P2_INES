@@ -26,7 +26,7 @@ public class peon extends Pieza {
     public boolean ValidarMovimiento() {
         boolean max= true;
         if (color.equalsIgnoreCase("blanco")) {
-            if (p1-1==x1||p2==y1) {
+            if (x1<p1 && y1==' '&& p1-1==x1||p2==y1) {
             max =  true;
         }
             else{
@@ -34,7 +34,7 @@ public class peon extends Pieza {
             }
         }
         else if (color.equalsIgnoreCase("negro")) {
-            if (p1+1==x1||p2==y1) {
+            if (x1>p1 &&y1==' '&& p1+1==x1||p2==y1) {
             max = true;
         }
             else{

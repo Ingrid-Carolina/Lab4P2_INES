@@ -23,7 +23,25 @@ public class caballo extends Pieza{
 
     @Override
     public boolean ValidarMovimiento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         boolean max= true;
+        if (color.equalsIgnoreCase("blanco")) {
+            if () {
+            max =  true;
+        }
+            else{
+                max = false;
+            }
+        }
+        else if (color.equalsIgnoreCase("negro")) {
+            if (x1>p1 && p1+1==x1||p2==y1) {
+            max = true;
+        }
+            else{
+                max = false;
+            }
+        }
+        return max;
     }
+    
   
 }
